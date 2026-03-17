@@ -30,7 +30,21 @@ This application fetches the latest top headlines using the [NewsAPI](https://ne
 
 ## 🚀 How to Run Locally
 
-**1. Clone the repository**
+**1) Clone the repository**
 ```bash
 git clone [https://github.com/YOUR_USERNAME/news-reader-app.git](https://github.com/YOUR_USERNAME/news-reader-app.git)
 cd news-reader-app
+```
+**2) Install Dependencies**
+```bash
+npm install
+```
+**3) Set up your API - Create .env**
+```bash
+VITE_NEWS_API_KEY=your_api_key_here
+```
+**4) Start development**
+```bash
+npm run dev
+```
+
