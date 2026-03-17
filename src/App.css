@@ -1,0 +1,206 @@
+/* --- THEME VARIABLES --- */
+:root {
+  --bg-color: #f5f5f7;
+  --card-bg: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --accent-color: #0071e3;
+  --border-radius: 18px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-primary: #f5f5f7;
+  --text-secondary: #86868b;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+/* --- GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: var(--transition);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- LAYOUT --- */
+.app-container {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- CARDS (News Items) --- */
+.news-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+  border: 1px solid #86868b;
+}
+
+.news-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- BUTTONS & PILLS --- */
+button {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+button:hover {
+  border-color: var(--text-primary);
+}
+
+/* --- HEADER STYLES --- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(134, 134, 139, 0.2);
+}
+
+.header-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em; 
+  color: var(--text-primary);
+}
+
+/* --- NEW STATS PILL --- */
+.stats-pill {
+  display: flex;
+  align-items: center;
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+
+/* --- CATEGORY FILTER STYLES --- */
+.category-filter {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  /* Hide scrollbar for a cleaner look. */
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+.category-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.category-pill {
+  border: none;
+  background-color: rgba(134, 134, 139, 0.1);
+  color: var(--text-secondary);
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.category-pill:hover {
+  background-color: rgba(134, 134, 139, 0.2);
+  border-color: transparent;
+}
+
+.category-pill.active {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+}
+
+/* --- NEWS LIST & ITEMS --- */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+}
+
+.news-card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.news-description {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(134, 134, 139, 0.2);
+}
+
+.news-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.read-btn {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  border-color: transparent;
+}
+
+.read-btn:hover {
+  opacity: 0.9;
+}
+
+.unread-btn {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+}
+
+.unread-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
