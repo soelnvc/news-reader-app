@@ -28,6 +28,17 @@ This application fetches the latest top headlines using the [NewsAPI](https://ne
 
 ---
 
+## 🛠️ Built With & Acknowledgments
+
+This project was developed as part of a rapid-prototyping exercise, utilizing AI-assisted development workflows:
+
+* **Logic & UI:** Built with [React.js](https://reactjs.org/) and [Vite](https://vitejs.dev/).
+* **Styling:** Minimalist CSS designed and refined via **Gemini 3 Flash**.
+* **Refinement:** Code cleaning, documentation, and logic comments optimized using **GitHub Copilot**.
+* **Data:** Powered by [NewsAPI](https://newsapi.org/).
+  
+---
+
 ## 🚀 How to Run Locally
 
 **1. Clone the repository**
